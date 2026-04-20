@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zpe-music-codec"
+version = "0.1.0"
+description = "Bounded symbolic-score codec split from the IMC monorepo"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Zer0paGlyph"}]
+license = {text = "LicenseRef-Zer0pa-SAL-6.2"}
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["zpe_music_codec*"]
