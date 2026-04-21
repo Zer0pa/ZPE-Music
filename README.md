@@ -39,12 +39,12 @@ It does not do audio understanding. The public surface is canonical symbolic sco
 
 ## Commercial Readiness
 
-This local remediation surface is pending final authority restamp.
+This release candidate is restamped to the verified source commit below.
 
 | Field | Value |
 |-------|-------|
 | Verdict | STAGED |
-| Commit SHA | UNSTAMPED |
+| Commit SHA | 87c8f781dadc |
 | Confidence | 100% |
 | Source | validation/results/release_verification.json |
 
