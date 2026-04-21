@@ -14,6 +14,8 @@ This repo vendors the minimum runtime it needs inside `src/zpe_music/` so that `
 - `src/zpe_music/music/`: authoritative music parser, grid, stroke, and pack runtime
 - `src/zpe_music/diagram/quantize.py`: minimal geometry primitives used by the music stroke path
 
+The `src/zpe_music/diagram/quantize.py` helper is a non-native import vendored from ZPE-Diagram's bounded geometry surface; see [ZPE-Diagram](https://github.com/Zer0pa/ZPE-Diagram).
+
 ## Verified Surface
 
 - canonical symbolic score events

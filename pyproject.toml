@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "zpe-music"
 version = "0.1.0"
+license = "LicenseRef-Zer0pa-SAL-7.0"
 description = "Canonical symbolic-score codec with a bounded note-local expression refinement"
 readme = "README.md"
 requires-python = ">=3.10"
