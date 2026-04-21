@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: zpe-music
+message: If you use this repository, please cite it using this metadata.
+type: software
+authors:
+  - family-names: Zer0pa
+version: 0.1.0
+url: https://github.com/Zer0pa/ZPE-Music

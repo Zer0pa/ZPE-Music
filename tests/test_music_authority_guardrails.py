@@ -11,14 +11,14 @@ from tests.common import FIXTURES, configure_env
 
 configure_env()
 
-from source.core.imc import IMCEncoder
+from zpe_music.core.imc import IMCEncoder
 
 
 def test_add_music_propagates_parser_dependency_failure(monkeypatch) -> None:
     def _raise_import_error(source: str) -> None:
         raise ImportError("music21 missing")
 
-    monkeypatch.setattr("source.core.imc.musicxml_to_events", _raise_import_error)
+    monkeypatch.setattr("zpe_music.core.imc.musicxml_to_events", _raise_import_error)
 
     try:
         IMCEncoder().add_music(FIXTURES / "simple_scale.musicxml")

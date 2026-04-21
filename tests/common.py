@@ -9,15 +9,14 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CORE_ROOT = ROOT.parent / "zpe-core"
+SRC_ROOT = ROOT / "src"
 FIXTURES = ROOT / "fixtures"
 NOTES = ROOT / "notes"
 
 
-if CORE_ROOT.exists():
-    core_root_text = str(CORE_ROOT)
-    if core_root_text not in sys.path:
-        sys.path.insert(0, core_root_text)
+src_root_text = str(SRC_ROOT)
+if src_root_text not in sys.path:
+    sys.path.insert(0, src_root_text)
 
 
 def configure_env() -> None:

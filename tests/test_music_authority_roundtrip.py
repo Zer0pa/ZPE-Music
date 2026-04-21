@@ -11,10 +11,10 @@ from tests.common import FIXTURES, configure_env
 
 configure_env()
 
-from source.core.imc import IMCDecoder, IMCEncoder
-from source.music.grid import grid_to_events
-from source.music.parser import musicxml_to_events
-from source.music.strokes import strokes_to_grid
+from zpe_music.core.imc import IMCDecoder, IMCEncoder
+from zpe_music.music.grid import grid_to_events
+from zpe_music.music.parser import musicxml_to_events
+from zpe_music.music.strokes import strokes_to_grid
 
 
 def _event_key(event) -> tuple:

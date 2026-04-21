@@ -1,0 +1,38 @@
+{
+  "product": "zpe-music",
+  "claim": "bounded canonical symbolic-score codec with bounded note-local expression refinement",
+  "scope": {
+    "base": [
+      "canonical symbolic score events",
+      "onset_quarter",
+      "duration_quarter",
+      "pitch/rest identity",
+      "canonical part identity",
+      "canonical voice identity",
+      "per-event program",
+      "supported articulation flags"
+    ],
+    "expression_refinement": [
+      "note-local performance onset delta",
+      "note-local performance duration delta",
+      "note-local velocity"
+    ],
+    "out_of_scope": [
+      "waveform understanding",
+      "continuous tempo curves",
+      "continuous dynamics curves",
+      "pedal and sustain state",
+      "performer-state modeling",
+      "raw MusicXML part-name identity"
+    ]
+  },
+  "authority_metrics": {
+    "score_event_exact_rate_mean": 1.0,
+    "part_exact_rate_mean": 1.0,
+    "articulation_exact_rate_mean": 1.0,
+    "expression_event_exact_rate_mean": 1.0,
+    "performance_tuple_exact_rate_mean": 1.0,
+    "repeated_note_case_exact_rate": 1.0,
+    "required_checks_passed": 11
+  }
+}
