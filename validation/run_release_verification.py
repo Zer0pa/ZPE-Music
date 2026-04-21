@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 from datetime import datetime, timezone
 import json
 from pathlib import Path
@@ -18,6 +19,10 @@ TEST_FILES = [
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=RESULT_PATH)
+    args = parser.parse_args()
+
     command = [
         sys.executable,
         "-m",
@@ -45,9 +50,9 @@ def main() -> None:
         },
         "governing_metrics": metrics["authority_metrics"],
     }
-    RESULT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    RESULT_PATH.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"output": str(RESULT_PATH), "status": result["status"]}))
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"output": str(args.output), "status": result["status"]}))
 
 
 if __name__ == "__main__":
