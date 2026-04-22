@@ -1,5 +1,7 @@
 # zpe-music-codec
 
+[![License: SAL v7.0](https://img.shields.io/badge/license-SAL%20v7.0-blue.svg)](LICENSE)
+
 Bounded symbolic-score codec split out of the IMC monorepo.
 
 This repo owns the Geogram 4 `L3` bounded release surface:

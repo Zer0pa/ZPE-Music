@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: zpe-music
+message: If you use this repository, please cite it using this metadata.
+type: software
+authors:
+  - name: Zer0pa (Pty) Ltd
+    email: architects@zer0pa.ai
+license: LicenseRef-Zer0pa-SAL-7.0
+version: 0.1.0
+url: https://github.com/Zer0pa/ZPE-Music
