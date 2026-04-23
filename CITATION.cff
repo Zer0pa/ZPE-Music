@@ -6,3 +6,6 @@ authors:
   - family-names: Zer0pa
 version: 0.1.0
 url: https://github.com/Zer0pa/ZPE-Music
+license: LicenseRef-Zer0pa-SAL-7.0
+contact:
+  - email: architects@zer0pa.ai

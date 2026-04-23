@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Canonical symbolic-score codec with a bounded note-local expression refinement"
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{name = "Zer0pa"}]
+authors = [{name = "Zer0pa (Pty) Ltd"}]
 dependencies = ["music21>=9.1"]
 
 [project.optional-dependencies]
