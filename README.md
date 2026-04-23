@@ -1,5 +1,7 @@
 # zpe-music
 
+[![License: SAL v7.0](https://img.shields.io/badge/license-SAL%20v7.0-e5e7eb?labelColor=111111)](LICENSE)
+
 ## What This Is
 
 `zpe-music` is a music encoding product for canonical symbolic score data, with a bounded note-local expression refinement carried on the same score note. It is useful now for MusicXML pipelines that need auditable roundtrip recovery of score structure plus note-local `attack`, `release`, and `dynamics`-derived fields.
