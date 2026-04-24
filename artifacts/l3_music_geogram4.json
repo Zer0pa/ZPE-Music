@@ -1,0 +1,421 @@
+{
+  "lane": "L3_music_geogram4_authoritative_symbolic_codec",
+  "generated_at_utc": "2026-04-20T13:23:58.787194+00:00",
+  "claim_class": "stroke-decomposable",
+  "frozen_scope": {
+    "authoritative_path_scope": "IMCEncoder.add_music -> music/parser.py -> music/grid.py -> music/strokes.py -> music/pack.py -> IMCDecoder music block reconstruction",
+    "in_scope": [
+      "canonical symbolic score events",
+      "onset_quarter",
+      "duration_quarter",
+      "pitch/rest identity",
+      "canonical part identity",
+      "canonical voice identity",
+      "per-event program",
+      "supported articulation flags"
+    ],
+    "out_of_scope": [
+      "audio waveform voice lane",
+      "part-name string recovery",
+      "tempo-change and dynamic-change exactness",
+      "expressive performance nuance and timbre"
+    ]
+  },
+  "frozen_non_claims": [
+    "No claim is made for audio waveform understanding.",
+    "No claim is made for raw MusicXML part-name identity.",
+    "Tempo-change and dynamic-change exactness remain outside the bounded adopter scope.",
+    "Transport size gains remain audit-only and are not acceptance evidence."
+  ],
+  "authoritative_adopter_status": {
+    "status": "bounded_adopter",
+    "reason": "Authoritative symbolic score events now roundtrip exactly on the bounded scope."
+  },
+  "component_isolation": {
+    "parser_stage": {
+      "status": "pass",
+      "parser_voice_capture_rate_mean": 1.0,
+      "parser_program_capture_rate_mean": 1.0
+    },
+    "projection_stage": {
+      "status": "pass",
+      "projection_exact_rate_mean": 1.0,
+      "geometry_signature_exact_rate_mean": 1.0
+    },
+    "reconstruction_stage": {
+      "status": "pass",
+      "authority_event_exact_rate_mean": 1.0,
+      "authority_event_exact_rate_min": 1.0
+    },
+    "root_cause_fixed": [
+      "music pack/unpack omitted symbolic stroke semantics",
+      "authoritative add_music path packed parser metadata instead of grid metadata",
+      "strokes_to_grid overwrote decoded time_step_quarter with a default value",
+      "parser did not canonicalize part IDs or recover voice/program robustly enough for bounded authority comparison"
+    ]
+  },
+  "authority_metrics": {
+    "event_integrity": {
+      "event_exact_rate_by_case": {
+        "simple_scale_fixture": 1.0,
+        "rest_articulation": 1.0,
+        "multitrack_tempo_program": 1.0,
+        "voice_tagged_polyphony": 1.0,
+        "tuplet_grid": 1.0
+      },
+      "note_event_exact_rate_by_case": {
+        "simple_scale_fixture": 1.0,
+        "rest_articulation": 1.0,
+        "multitrack_tempo_program": 1.0,
+        "voice_tagged_polyphony": 1.0,
+        "tuplet_grid": 1.0
+      },
+      "event_exact_rate_mean": 1.0,
+      "note_event_exact_rate_mean": 1.0
+    },
+    "field_recovery": {
+      "articulation_exact_rate_mean": 1.0,
+      "articulation_positive_recall_mean": 1.0,
+      "part_exact_rate_mean": 1.0,
+      "rest_exact_rate_mean": 1.0,
+      "parser_voice_capture_rate_mean": 1.0,
+      "parser_program_capture_rate_mean": 1.0
+    },
+    "timing_pitch_error": {
+      "onset_quarter_mae_mean": 0.0,
+      "duration_quarter_mae_mean": 0.0,
+      "pitch_midi_mae_mean": 0.0
+    },
+    "multitrack_fidelity": {
+      "cases_with_source_multitrack": 2,
+      "cases_with_decoded_multitrack": 2
+    }
+  },
+  "audit_only_proxy_metrics": {
+    "mean_geometry_signature_exact_rate": 1.0,
+    "mean_onset_tick_mae": 0.0,
+    "mean_duration_tick_mae": 0.0,
+    "mean_relative_pitch_index_mae": 0.0,
+    "mean_stream_word_count": 38.0,
+    "note_count_pass_rate": 1.0
+  },
+  "baseline_delta": {
+    "direct_music_object_baseline_event_exact_rate": 1.0,
+    "authority_event_exact_rate_mean": 1.0,
+    "authority_vs_direct_delta": 0.0,
+    "current_benchmark_note_count_pass_rate": 1.0,
+    "current_benchmark_note_count_definition": "pass if decoded_event_count == source_event_count"
+  },
+  "helper_leakage_result": {
+    "route": "music/temporal_codec.py helper/oracle route in grid-tick units (leakage-only)",
+    "cases": [
+      {
+        "case": "simple_scale_fixture",
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "helper_word_count": 24
+      },
+      {
+        "case": "rest_articulation",
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "helper_word_count": 9
+      },
+      {
+        "case": "multitrack_tempo_program",
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "helper_word_count": 12
+      },
+      {
+        "case": "voice_tagged_polyphony",
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "helper_word_count": 10
+      },
+      {
+        "case": "tuplet_grid",
+        "helper_note_event_exact_rate": 0.0,
+        "helper_program_exact_rate": 0.0,
+        "helper_word_count": 12
+      }
+    ],
+    "summary": {
+      "raw_authority_note_event_exact_rate_mean": 1.0,
+      "helper_note_event_exact_rate_mean": 0.8,
+      "helper_program_exact_rate_mean": 0.8,
+      "exact_rate_gain_helper_minus_raw": -0.19999999999999996
+    }
+  },
+  "impossibility_route": {
+    "aliasing_pair_count": 4,
+    "collapsed_alias_probe_count": 0,
+    "semantic_alias_pairs": [
+      {
+        "pair": "rest_vs_note_origin",
+        "word_count_a": 9,
+        "word_count_b": 8,
+        "words_equal": false
+      },
+      {
+        "pair": "plain_vs_staccato",
+        "word_count_a": 8,
+        "word_count_b": 9,
+        "words_equal": false
+      },
+      {
+        "pair": "piano_vs_violin_program",
+        "word_count_a": 9,
+        "word_count_b": 9,
+        "words_equal": false
+      },
+      {
+        "pair": "part_assignment_cg_vs_gc",
+        "word_count_a": 14,
+        "word_count_b": 14,
+        "words_equal": false
+      }
+    ]
+  },
+  "worst_cell_result": {
+    "authority_event_exact_rate_min": 1.0,
+    "authority_note_event_exact_rate_min": 1.0,
+    "part_exact_rate_min": 1.0,
+    "rest_exact_rate_min": 1.0,
+    "parser_voice_capture_rate_min": 1.0,
+    "parser_program_capture_rate_min": 1.0,
+    "articulation_positive_recall_min": 1.0,
+    "pitch_origin_exact_all_cases": true,
+    "time_step_exact_all_cases": true
+  },
+  "raw_route": {
+    "description": "live authoritative encode/decode path only",
+    "cases": [
+      {
+        "case": "simple_scale_fixture",
+        "case_origin": "repository_fixture",
+        "source_event_count": 8,
+        "decoded_stroke_count": 8,
+        "stream_word_count": 52,
+        "authority_event_exact_rate": 1.0,
+        "authority_note_event_exact_rate": 1.0,
+        "articulation_exact_rate": 1.0,
+        "articulation_positive_recall": 1.0,
+        "part_exact_rate": 1.0,
+        "rest_exact_rate": 1.0,
+        "parser_voice_capture_rate": 1.0,
+        "parser_program_capture_rate": 1.0,
+        "onset_quarter_mae": 0.0,
+        "duration_quarter_mae": 0.0,
+        "pitch_midi_mae": 0.0,
+        "geometry_signature_exact_rate": 1.0,
+        "onset_tick_mae": 0.0,
+        "duration_tick_mae": 0.0,
+        "relative_pitch_index_mae": 0.0,
+        "multitrack_source_part_count": 1,
+        "multitrack_decoded_part_count": 1,
+        "source_program_count": 0,
+        "source_voice_tagged_note_count": 0,
+        "projection_exact_rate": 1.0,
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "metadata_exact": {
+          "time_signature_exact": true,
+          "key_signature_exact": true,
+          "tempo_exact": true,
+          "tempo_changes_exact": false,
+          "part_names_exact": false,
+          "part_programs_exact": true,
+          "pitch_origin_exact": true,
+          "time_step_quarter_exact": true
+        }
+      },
+      {
+        "case": "rest_articulation",
+        "case_origin": "generated_inline_musicxml",
+        "source_event_count": 4,
+        "decoded_stroke_count": 4,
+        "stream_word_count": 33,
+        "authority_event_exact_rate": 1.0,
+        "authority_note_event_exact_rate": 1.0,
+        "articulation_exact_rate": 1.0,
+        "articulation_positive_recall": 1.0,
+        "part_exact_rate": 1.0,
+        "rest_exact_rate": 1.0,
+        "parser_voice_capture_rate": 1.0,
+        "parser_program_capture_rate": 1.0,
+        "onset_quarter_mae": 0.0,
+        "duration_quarter_mae": 0.0,
+        "pitch_midi_mae": 0.0,
+        "geometry_signature_exact_rate": 1.0,
+        "onset_tick_mae": 0.0,
+        "duration_tick_mae": 0.0,
+        "relative_pitch_index_mae": 0.0,
+        "multitrack_source_part_count": 2,
+        "multitrack_decoded_part_count": 2,
+        "source_program_count": 2,
+        "source_voice_tagged_note_count": 0,
+        "projection_exact_rate": 1.0,
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "metadata_exact": {
+          "time_signature_exact": true,
+          "key_signature_exact": true,
+          "tempo_exact": true,
+          "tempo_changes_exact": true,
+          "part_names_exact": false,
+          "part_programs_exact": true,
+          "pitch_origin_exact": true,
+          "time_step_quarter_exact": true
+        }
+      },
+      {
+        "case": "multitrack_tempo_program",
+        "case_origin": "generated_inline_musicxml",
+        "source_event_count": 5,
+        "decoded_stroke_count": 5,
+        "stream_word_count": 40,
+        "authority_event_exact_rate": 1.0,
+        "authority_note_event_exact_rate": 1.0,
+        "articulation_exact_rate": 1.0,
+        "articulation_positive_recall": 1.0,
+        "part_exact_rate": 1.0,
+        "rest_exact_rate": 1.0,
+        "parser_voice_capture_rate": 1.0,
+        "parser_program_capture_rate": 1.0,
+        "onset_quarter_mae": 0.0,
+        "duration_quarter_mae": 0.0,
+        "pitch_midi_mae": 0.0,
+        "geometry_signature_exact_rate": 1.0,
+        "onset_tick_mae": 0.0,
+        "duration_tick_mae": 0.0,
+        "relative_pitch_index_mae": 0.0,
+        "multitrack_source_part_count": 2,
+        "multitrack_decoded_part_count": 2,
+        "source_program_count": 2,
+        "source_voice_tagged_note_count": 0,
+        "projection_exact_rate": 1.0,
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "metadata_exact": {
+          "time_signature_exact": true,
+          "key_signature_exact": true,
+          "tempo_exact": true,
+          "tempo_changes_exact": false,
+          "part_names_exact": false,
+          "part_programs_exact": true,
+          "pitch_origin_exact": true,
+          "time_step_quarter_exact": true
+        }
+      },
+      {
+        "case": "voice_tagged_polyphony",
+        "case_origin": "generated_inline_musicxml",
+        "source_event_count": 4,
+        "decoded_stroke_count": 4,
+        "stream_word_count": 31,
+        "authority_event_exact_rate": 1.0,
+        "authority_note_event_exact_rate": 1.0,
+        "articulation_exact_rate": 1.0,
+        "articulation_positive_recall": 1.0,
+        "part_exact_rate": 1.0,
+        "rest_exact_rate": 1.0,
+        "parser_voice_capture_rate": 1.0,
+        "parser_program_capture_rate": 1.0,
+        "onset_quarter_mae": 0.0,
+        "duration_quarter_mae": 0.0,
+        "pitch_midi_mae": 0.0,
+        "geometry_signature_exact_rate": 1.0,
+        "onset_tick_mae": 0.0,
+        "duration_tick_mae": 0.0,
+        "relative_pitch_index_mae": 0.0,
+        "multitrack_source_part_count": 1,
+        "multitrack_decoded_part_count": 1,
+        "source_program_count": 0,
+        "source_voice_tagged_note_count": 4,
+        "projection_exact_rate": 1.0,
+        "helper_note_event_exact_rate": 1.0,
+        "helper_program_exact_rate": 1.0,
+        "metadata_exact": {
+          "time_signature_exact": true,
+          "key_signature_exact": true,
+          "tempo_exact": true,
+          "tempo_changes_exact": true,
+          "part_names_exact": false,
+          "part_programs_exact": true,
+          "pitch_origin_exact": true,
+          "time_step_quarter_exact": true
+        }
+      },
+      {
+        "case": "tuplet_grid",
+        "case_origin": "generated_inline_musicxml",
+        "source_event_count": 5,
+        "decoded_stroke_count": 5,
+        "stream_word_count": 34,
+        "authority_event_exact_rate": 1.0,
+        "authority_note_event_exact_rate": 1.0,
+        "articulation_exact_rate": 1.0,
+        "articulation_positive_recall": 1.0,
+        "part_exact_rate": 1.0,
+        "rest_exact_rate": 1.0,
+        "parser_voice_capture_rate": 1.0,
+        "parser_program_capture_rate": 1.0,
+        "onset_quarter_mae": 0.0,
+        "duration_quarter_mae": 0.0,
+        "pitch_midi_mae": 0.0,
+        "geometry_signature_exact_rate": 1.0,
+        "onset_tick_mae": 0.0,
+        "duration_tick_mae": 0.0,
+        "relative_pitch_index_mae": 0.0,
+        "multitrack_source_part_count": 1,
+        "multitrack_decoded_part_count": 1,
+        "source_program_count": 0,
+        "source_voice_tagged_note_count": 0,
+        "projection_exact_rate": 1.0,
+        "helper_note_event_exact_rate": 0.0,
+        "helper_program_exact_rate": 0.0,
+        "metadata_exact": {
+          "time_signature_exact": true,
+          "key_signature_exact": true,
+          "tempo_exact": true,
+          "tempo_changes_exact": true,
+          "part_names_exact": false,
+          "part_programs_exact": true,
+          "pitch_origin_exact": true,
+          "time_step_quarter_exact": true
+        }
+      }
+    ]
+  },
+  "fixes_applied": [
+    "Canonical parser part/voice extraction and per-part program recovery",
+    "Music pack/unpack control words for pitch_origin, time_step_quarter denominator, part, voice, rest/articulation flags, and program",
+    "Authoritative add_music handoff from parser metadata to grid metadata",
+    "Reconstruction fix so decoded time_step_quarter is respected",
+    "Music authority regression tests and strengthened fidelity batteries"
+  ],
+  "final_verdict": {
+    "status": "bounded_symbolic_music_adopter",
+    "language": "Bounded adopter achieved for canonical symbolic score events on the authoritative music path."
+  },
+  "cross_workstream_intervention_decision": {
+    "decision": "publish-bounded-adopter",
+    "reason": "The bounded symbolic score scope is now real and falsifier-clean."
+  },
+  "evidence_locations": {
+    "authority_path_code": [
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/zpe_multimodal/core/imc.py",
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/zpe_multimodal/music/parser.py",
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/zpe_multimodal/music/grid.py",
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/zpe_multimodal/music/strokes.py",
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/zpe_multimodal/music/pack.py"
+    ],
+    "helper_route_code": "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/zpe_multimodal/music/temporal_codec.py",
+    "tests": [
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/tests/test_music_authority_roundtrip.py",
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/tests/test_fidelity_battery.py",
+      "/Users/Zer0pa/ZPE/zpe-music-codec/v0.0/code/tests/test_integrated_fidelity.py"
+    ]
+  }
+}
