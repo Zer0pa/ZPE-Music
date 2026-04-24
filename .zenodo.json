@@ -1,0 +1,26 @@
+{
+  "title": "zpe-music",
+  "description": "zpe-music is a music encoding product for canonical symbolic score data, with a bounded note-local expression refinement carried on the same score note. It is useful now for MusicXML pipelines that need auditable roundtrip recovery of score structure plus note-local attack, release, and dynamics-derived fields.",
+  "creators": [
+    {
+      "name": "Zer0pa (Pty) Ltd"
+    }
+  ],
+  "keywords": [
+    "musicxml",
+    "symbolic music",
+    "score codec",
+    "note-local expression",
+    "zero-point encoding"
+  ],
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
+  "upload_type": "software",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Zer0pa/ZPE-Music",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ]
+}

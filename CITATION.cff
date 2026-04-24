@@ -3,9 +3,15 @@ title: zpe-music
 message: If you use this repository, please cite it using this metadata.
 type: software
 authors:
-  - family-names: Zer0pa
+  - name: Zer0pa (Pty) Ltd
+    email: architects@zer0pa.ai
 version: 0.1.0
+repository-code: https://github.com/Zer0pa/ZPE-Music
 url: https://github.com/Zer0pa/ZPE-Music
 license: LicenseRef-Zer0pa-SAL-7.0
-contact:
-  - email: architects@zer0pa.ai
+keywords:
+  - musicxml
+  - symbolic music
+  - score codec
+  - note-local expression
+  - zero-point encoding
