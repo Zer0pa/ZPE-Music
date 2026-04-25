@@ -10,12 +10,17 @@ It does not do audio understanding. The public surface is canonical symbolic sco
 
 ## Key Metrics
 
-| Metric | Value | Baseline |
-|-------|-------|----------|
-| SCORE_EVENT_EXACT | 1.0 | Direct |
-| EXPRESSION_EVENT_EXACT | 1.0 | Direct |
-| REPEATED_NOTE_CASE | 1.0 | Hard cell |
-| REQUIRED_CHECKS | 11/11 | Battery |
+| Metric | Value | Proof artifact | CI test |
+|--------|-------|----------------|---------|
+| SCORE_EVENT_EXACT (`score_event_exact_rate_mean`) | 1.0 | `proofs/artifacts/music_release_metrics.json` | `tests/test_music_authority_roundtrip.py` |
+| PART_EXACT (`part_exact_rate_mean`) | 1.0 | `proofs/artifacts/music_release_metrics.json` | `tests/test_music_authority_roundtrip.py` |
+| ARTICULATION_EXACT (`articulation_exact_rate_mean`) | 1.0 | `proofs/artifacts/music_release_metrics.json` | `tests/test_music_authority_roundtrip.py` |
+| EXPRESSION_EVENT_EXACT (`expression_event_exact_rate_mean`) | 1.0 | `proofs/artifacts/music_release_metrics.json` | `tests/test_music_expression_authority_roundtrip.py` |
+| PERFORMANCE_TUPLE_EXACT (`performance_tuple_exact_rate_mean`) | 1.0 | `proofs/artifacts/music_release_metrics.json` | `tests/test_music_expression_authority_roundtrip.py` |
+| REPEATED_NOTE_CASE (`repeated_note_case_exact_rate`) | 1.0 | `proofs/artifacts/music_release_metrics.json` | `tests/test_music_expression_authority_roundtrip.py::test_repeated_note_expression_roundtrip_exact` |
+| REQUIRED_CHECKS_PASSED | 11/11 in 3.39 s | `validation/results/release_verification.json` | `validation/run_release_verification.py` |
+
+All seven metrics verified on the authority path. No comp-benchmark baselines (MP3/AAC/Opus/MIDI/MusicGen) exist in this repo — this is a symbolic-score codec, not an audio codec.
 
 > Source: `proofs/artifacts/music_release_metrics.json`, `validation/results/release_verification.json`
 
