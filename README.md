@@ -28,16 +28,6 @@ All seven metrics measured on the bounded authority test corpus (11 synthetic/co
 
 Source: `proofs/artifacts/music_release_metrics.json`, `validation/results/release_verification.json`
 
-## Commercial Readiness
-
-| Field | Value |
-|-------|-------|
-| Verdict | STAGED |
-| Scope | Bounded authority path on synthetic/controlled MusicXML corpus |
-| Comp benchmarks | NOT CLAIMED — symbolic-score codec; no audio codec baseline applies |
-| Production generality | Not claimed beyond authority corpus |
-| Always-in-beta | Useful now on the bounded path; improving continuously |
-
 ## What We Prove
 
 - Canonical symbolic score events roundtrip exactly on the verified authority path.
