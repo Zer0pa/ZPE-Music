@@ -4,14 +4,9 @@
 
 ## What This Is
 
-`zpe-music` is a music encoding product for canonical symbolic score data, with a bounded note-local expression refinement carried on the same score note. It is useful now for MusicXML pipelines that need auditable roundtrip recovery of score structure plus note-local `attack`, `release`, and `dynamics`-derived fields.
+`zpe-music` is a music encoding product for canonical symbolic score data, with a bounded note-local expression refinement carried on the same score note. It targets MusicXML pipelines that need auditable roundtrip recovery of score structure plus note-local `attack`, `release`, and `dynamics`-derived fields.
 
 It does not do audio understanding. The public surface is canonical symbolic score plus a bounded note-local expression refinement, and the hard boundaries are stated explicitly below.
-
-| Field | Value |
-|-------|-------|
-| Architecture | SCORE_STREAM |
-| Encoding | MUSIC_SCORE_FIBER_V1 |
 
 ## Key Metrics
 
@@ -39,43 +34,14 @@ It does not do audio understanding. The public surface is canonical symbolic sco
 - Raw MusicXML part-name identity recovery.
 - Anything beyond bounded note-local `attack`, `release`, and `dynamics`-derived refinement.
 
-## Commercial Readiness
+## Verification Surface
 
-This release candidate is restamped to the verified source commit below.
-
-| Field | Value |
-|-------|-------|
-| Verdict | STAGED |
-| Commit SHA | ef28b3e359a9 |
-| Confidence | 100% |
-| Source | validation/results/release_verification.json |
-
-## Tests and Verification
-
-| Code | Check | Verdict |
-|------|-------|---------|
-| V_01 | Canonical symbolic-score authority roundtrip battery | PASS |
-| V_02 | Note-local expression roundtrip battery | PASS |
-| V_03 | Authority-path guardrail battery | PASS |
-| V_04 | Standalone release verification script | PASS |
-
-## Proof Anchors
-
-| Path | State |
-|------|-------|
-| `proofs/manifests/CURRENT_AUTHORITY_PACKET.md` | VERIFIED |
-| `proofs/artifacts/music_release_metrics.json` | VERIFIED |
-| `validation/results/release_verification.json` | VERIFIED |
-| `docs/SCOPE.md` | VERIFIED |
-
-## Repo Shape
-
-| Field | Value |
-|-------|-------|
-| Proof Anchors | 4 |
-| Modality Lanes | 1 |
-| Authority Source | `src/zpe_music/music/` |
-| Public Package | `zpe-music` |
+- Proof metrics: `proofs/artifacts/music_release_metrics.json`
+- Reproducible verification output: `validation/results/release_verification.json`
+- Verification entrypoint: `validation/run_release_verification.py`
+- Authority roundtrip battery: `tests/test_music_authority_roundtrip.py`
+- Expression roundtrip battery: `tests/test_music_expression_authority_roundtrip.py`
+- Guardrail battery: `tests/test_music_authority_guardrails.py`
 
 ## Quick Start
 
@@ -87,17 +53,3 @@ python -m pip install -e '.[dev]'
 python validation/run_release_verification.py
 python -m pytest -q tests/test_music_authority_roundtrip.py tests/test_music_expression_authority_roundtrip.py tests/test_music_authority_guardrails.py
 ```
-
-### Authority Notes
-
-The current roundtrip path is:
-
-`IMCEncoder.add_music -> zpe_music/music/parser.py -> zpe_music/music/grid.py -> zpe_music/music/strokes.py -> zpe_music/music/pack.py -> IMCDecoder music block reconstruction`
-
-### Directory Map
-
-- `src/`: standalone music runtime and public package surface
-- `tests/`: bounded authority and guardrail batteries
-- `proofs/`: committed proof anchors for the public scope
-- `validation/`: reproducible verification entrypoint and emitted results
-- `docs/`: architecture, scope, FAQ, support, and legal boundary notes
