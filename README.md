@@ -20,7 +20,7 @@ It does not do audio understanding. The public surface is canonical symbolic sco
 | REPEATED_NOTE_CASE (`repeated_note_case_exact_rate`) | 1.0 | `proofs/artifacts/music_release_metrics.json` | `tests/test_music_expression_authority_roundtrip.py::test_repeated_note_expression_roundtrip_exact` |
 | REQUIRED_CHECKS_PASSED | 11/11 in 3.39 s | `validation/results/release_verification.json` | `validation/run_release_verification.py` |
 
-All seven metrics verified on the authority path. No comp-benchmark baselines (MP3/AAC/Opus/MIDI/MusicGen) exist in this repo — this is a symbolic-score codec, not an audio codec.
+All seven metrics measured on the bounded authority test corpus (11 synthetic/controlled MusicXML cases). These are test-corpus results on the authority path, not production-generality claims. No comp-benchmark baselines (MP3/AAC/Opus/MIDI/MusicGen) exist in this repo — this is a symbolic-score codec, not an audio codec.
 
 > Source: `proofs/artifacts/music_release_metrics.json`, `validation/results/release_verification.json`
 
