@@ -33,7 +33,7 @@ Issues = "https://github.com/Zer0pa/ZPE-Music/issues"
 Changelog = "https://github.com/Zer0pa/ZPE-Music/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
-dev = ["numpy>=1.26", "pytest>=8.0"]
+dev = ["pytest>=8.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
