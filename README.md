@@ -46,7 +46,7 @@ This release candidate is restamped to the verified source commit below.
 | Field | Value |
 |-------|-------|
 | Verdict | STAGED |
-| Commit SHA | 87c8f781dadc |
+| Commit SHA | ef28b3e359a9 |
 | Confidence | 100% |
 | Source | validation/results/release_verification.json |
 

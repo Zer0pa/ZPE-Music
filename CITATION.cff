@@ -1,11 +1,19 @@
 cff-version: 1.2.0
-title: zpe-music
+title: ZPE-Music
 message: If you use this repository, please cite it using this metadata.
 type: software
 authors:
-  - family-names: Zer0pa
+  - name: Zer0pa (Pty) Ltd
 version: 0.1.0
 url: https://github.com/Zer0pa/ZPE-Music
+repository-code: https://github.com/Zer0pa/ZPE-Music
+keywords:
+  - musicxml
+  - symbolic-score
+  - music-encoding
+  - deterministic-codec
+  - score-roundtrip
+  - note-expression
 license: LicenseRef-Zer0pa-SAL-7.0
 contact:
   - email: architects@zer0pa.ai

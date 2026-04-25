@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=68,<77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,8 +8,30 @@ version = "0.1.0"
 description = "Canonical symbolic-score codec with a bounded note-local expression refinement"
 readme = "README.md"
 requires-python = ">=3.10"
+license = {text = "LicenseRef-Zer0pa-SAL-7.0"}
 authors = [{name = "Zer0pa (Pty) Ltd"}]
+keywords = [
+    "musicxml",
+    "symbolic-score",
+    "music-encoding",
+    "deterministic-codec",
+    "score-roundtrip",
+    "note-expression",
+]
+classifiers = [
+    "License :: Other/Proprietary License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Development Status :: 4 - Beta",
+]
 dependencies = ["music21>=9.1"]
+
+[project.urls]
+Homepage = "https://github.com/Zer0pa/ZPE-Music"
+Documentation = "https://github.com/Zer0pa/ZPE-Music#readme"
+Repository = "https://github.com/Zer0pa/ZPE-Music"
+Issues = "https://github.com/Zer0pa/ZPE-Music/issues"
+Changelog = "https://github.com/Zer0pa/ZPE-Music/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = ["numpy>=1.26", "pytest>=8.0"]
