@@ -62,3 +62,9 @@ python -m pip install -e '.[dev]'
 python validation/run_release_verification.py
 python -m pytest -q tests/test_music_authority_roundtrip.py tests/test_music_expression_authority_roundtrip.py tests/test_music_authority_guardrails.py
 ```
+
+## Upcoming Workstreams
+
+This section captures the active lane priorities — what the next agent or contributor picks up, and what investors should expect. Cadence is continuous, not milestoned.
+
+- **Real MusicXML corpus benchmark** — Active Engineering. Benchmark against MuseScore open scores (~50) and IMSLP MusicXML exports (~50) to validate the authority path beyond the 11 synthetic cases.
