@@ -1,6 +1,6 @@
 # zpe-music
 
-[![License: SAL v7.0](https://img.shields.io/badge/license-SAL%20v7.0-e5e7eb?labelColor=111111)](LICENSE)
+[![License: SAL v7.1](https://img.shields.io/badge/license-SAL%20v7.0-e5e7eb?labelColor=111111)](LICENSE)
 
 **6/6 exact roundtrip metrics. 11/11 checks passing. Bounded symbolic-score codec with note-local expression refinement. No audio waveforms. No comp benchmarks.**
 
