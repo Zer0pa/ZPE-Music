@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Canonical symbolic-score codec with a bounded note-local expression refinement"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "LicenseRef-Zer0pa-SAL-7.0"}
+license = {text = "LicenseRef-Zer0pa-SAL-7.1"}
 authors = [{name = "Zer0pa (Pty) Ltd"}]
 keywords = [
     "musicxml",
