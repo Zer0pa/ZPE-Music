@@ -14,7 +14,8 @@
     "score-roundtrip",
     "note-expression"
   ],
-  "license": "LicenseRef-Zer0pa-SAL-7.0",
+  "version": "0.1.0",
+  "license": "LicenseRef-Zer0pa-SAL-7.1",
   "upload_type": "software",
   "related_identifiers": [
     {
