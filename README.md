@@ -1,6 +1,6 @@
 # zpe-music
 
-[![License: SAL v7.1](https://img.shields.io/badge/license-SAL%20v7.0-e5e7eb?labelColor=111111)](LICENSE)
+[![License: SAL v7.1](https://img.shields.io/badge/license-SAL%20v7.1-e5e7eb?labelColor=111111)](LICENSE)
 
 **6/6 exact roundtrip metrics. 11/11 checks passing. Bounded symbolic-score codec with note-local expression refinement. No audio waveforms. No comp benchmarks.**
 
@@ -45,8 +45,8 @@ It does not do audio understanding. The public surface is canonical symbolic sco
 | Visibility | PUBLIC |
 | Architecture | MUSIC_STREAM |
 | Encoding | MUSIC_SYMBOLIC_V1 |
-| Commit SHA | cdd6b75 |
-| License | SAL-7.0 |
+| Commit SHA | 55d89c3 |
+| License | SAL-7.1 |
 | Authority Source | proofs/artifacts/music_release_metrics.json |
 
 ## Readiness
@@ -56,7 +56,7 @@ It does not do audio understanding. The public surface is canonical symbolic sco
 | Verdict | STAGED |
 | Checks | 7/7 |
 | Anchors | 2 display anchors |
-| Commit | cdd6b75 |
+| Commit | 55d89c3 |
 | Authority | proofs/artifacts/music_release_metrics.json |
 
 ### Honest Blocker
