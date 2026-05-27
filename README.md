@@ -65,7 +65,7 @@ python -m pytest -q tests/test_music_authority_roundtrip.py tests/test_music_exp
 <table width="100%">
 <tr>
 <td width="50%" valign="top">
-<div><b>03 · VALUE</b></div>
+<div><b>03 · VALUE OF MARKET</b></div>
       <div>$10.8<span>B</span></div>
       <div>Music publishing grows; the symbolic-score archive sits <b>unpriced inside publisher and rights workflows.</b></div>
 </td>
