@@ -2,6 +2,32 @@
 
 ## Install / Developer Commands
 
+<!-- INSTALL-DX:START -->
+#### Package Install
+
+Installable package: `python3.11 -m pip install zpe-music`.
+Current release: `0.1.0` on [PyPI](https://pypi.org/project/zpe-music/).
+Source: [Zer0pa/ZPE-Music](https://github.com/Zer0pa/ZPE-Music/).
+
+```bash
+python3.11 -m pip install zpe-music
+```
+
+Import smoke:
+
+```bash
+python3.11 - <<'PY'
+import importlib.metadata as md
+import zpe_music
+
+print("zpe-music", md.version("zpe-music"))
+PY
+```
+
+Install success only proves package acquisition/import. Product scope, stale PyPI state, platform limits, and blockers remain in the front-door sections below.
+- PyPI copy is stale or pending refresh; install success is not product readiness.
+<!-- INSTALL-DX:END -->
+
 #### Quick Start
 
 ```bash
