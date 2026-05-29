@@ -1,9 +1,6 @@
 # ZPE-Music
 
-## Install / Developer Commands
-
-<!-- INSTALL-DX:START -->
-#### Package Install
+## Package Install
 
 Installable package: `python3.11 -m pip install zpe-music`.
 Current release: `0.1.0` on [PyPI](https://pypi.org/project/zpe-music/).
@@ -13,31 +10,9 @@ Source: [Zer0pa/ZPE-Music](https://github.com/Zer0pa/ZPE-Music/).
 python3.11 -m pip install zpe-music
 ```
 
-Import smoke:
+For full install, smoke, source, and developer commands, [click here](#install-developer-commands-detailed).
 
-```bash
-python3.11 - <<'PY'
-import importlib.metadata as md
-import zpe_music
-
-print("zpe-music", md.version("zpe-music"))
-PY
-```
-
-Install success only proves package acquisition/import. Product scope, stale PyPI state, platform limits, and blockers remain in the front-door sections below.
-- PyPI copy is stale or pending refresh; install success is not product readiness.
-<!-- INSTALL-DX:END -->
-
-#### Quick Start
-
-```bash
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e '.[dev]'
-python validation/run_release_verification.py
-python -m pytest -q tests/test_music_authority_roundtrip.py tests/test_music_expression_authority_roundtrip.py tests/test_music_authority_guardrails.py
-```
+---
 
 <table width="100%">
 <tr>
@@ -310,3 +285,46 @@ python -m pytest -q tests/test_music_authority_roundtrip.py tests/test_music_exp
 </td>
 </tr>
 </table>
+
+---
+
+<a id="install-developer-commands-detailed"></a>
+
+## Install / Developer Commands Detailed
+
+<!-- INSTALL-DX:START -->
+#### Package Install
+
+Installable package: `python3.11 -m pip install zpe-music`.
+Current release: `0.1.0` on [PyPI](https://pypi.org/project/zpe-music/).
+Source: [Zer0pa/ZPE-Music](https://github.com/Zer0pa/ZPE-Music/).
+
+```bash
+python3.11 -m pip install zpe-music
+```
+
+Import smoke:
+
+```bash
+python3.11 - <<'PY'
+import importlib.metadata as md
+import zpe_music
+
+print("zpe-music", md.version("zpe-music"))
+PY
+```
+
+Install success only proves package acquisition/import. Product scope, stale PyPI state, platform limits, and blockers remain in the front-door sections below.
+- PyPI copy is stale or pending refresh; install success is not product readiness.
+<!-- INSTALL-DX:END -->
+
+#### Quick Start
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e '.[dev]'
+python validation/run_release_verification.py
+python -m pytest -q tests/test_music_authority_roundtrip.py tests/test_music_expression_authority_roundtrip.py tests/test_music_authority_guardrails.py
+```
