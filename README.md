@@ -19,6 +19,7 @@ For full install, smoke, source, and developer commands, [click here](#install-d
 <td width="100%" valign="top">
 <div><span><b>00 · ZPE-MUSIC</b> · SYMBOLIC SCORE CODEC</span> <span>DEVELOPER-READY · REAL-CORPUS OPEN</span></div>
       <h1>Encoding The <span>Music Inside The Music</span></h1>
+      <p><strong>Live experiment. Not a release. Ambition headlined. Claims bounded.</strong></p>
       <p>The score codec — what the composer wrote, not what the orchestra played · ZPE-Music · PyPI <em>zpe-music</em> 0.1.0 · github.com/Zer0pa/ZPE-Music</p>
       <p>A recording captures what an orchestra sounded like on one Tuesday night. A score captures what the composer meant — every event, voice, articulation and expression beneath the sound. Every audio codec eats the score and emits a waveform. ZPE-Music does the opposite: it encodes the score itself. On the declared MusicXML score surface, all six exactness axes resolve at <strong>1.0</strong> under <strong>11/11</strong> release checks. Real-corpus work against MuseScore and IMSLP catalogues is active, not done.</p>
 </td>
